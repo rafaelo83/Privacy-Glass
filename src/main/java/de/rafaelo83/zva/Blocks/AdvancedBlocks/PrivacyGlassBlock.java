@@ -3,6 +3,7 @@ package de.rafaelo83.zva.Blocks.AdvancedBlocks;
 import de.rafaelo83.zva.Blocks.Misc.WaveDataManager;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.TransparentBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -21,7 +22,7 @@ import java.util.Deque;
 import java.util.HashSet;
 import java.util.Set;
 
-public class PrivacyGlassBlock extends Block {
+public class PrivacyGlassBlock extends TransparentBlock {
     public static final BooleanProperty POWERED = BooleanProperty.of("powered");
     public static final int MAX_WAVE_STEPS = 10;
 
