@@ -3,6 +3,7 @@ package de.rafaelo83.zva.Menus;
 import de.rafaelo83.zva.Blocks.ModBlocks;
 import de.rafaelo83.zva.Zva;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -16,6 +17,7 @@ public class ZvaCreativeTab {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.zva"))
                     .icon(() -> new ItemStack(ModBlocks.PRIVACY_GLASS)).entries((displayContext, entries) -> {
                         entries.add(ModBlocks.PRIVACY_GLASS);
+                        entries.add(Blocks.END_ROD);
                     }).build());
 
     public static void init() {}
