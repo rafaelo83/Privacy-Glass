@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "powered=true": { "model": "zva:block/privacy_glass_opaque" },
+    "powered=false": { "model": "zva:block/privacy_glass_transparent" }
+  }
+}
+
