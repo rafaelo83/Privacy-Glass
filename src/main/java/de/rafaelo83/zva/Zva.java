@@ -1,7 +1,6 @@
 package de.rafaelo83.zva;
 
 import de.rafaelo83.zva.Blocks.ModBlocks;
-import de.rafaelo83.zva.Menus.ZvaCreativeTab;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroups;
