@@ -3,8 +3,10 @@ package de.rafaelo83.zva.Menus;
 import de.rafaelo83.zva.Blocks.ModBlocks;
 import de.rafaelo83.zva.Zva;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -19,6 +21,8 @@ public class ZvaCreativeTab {
                         entries.add(ModBlocks.PRIVACY_GLASS);
                         entries.add(Blocks.END_ROD);
                     }).build());
+
+
 
     public static void init() {}
 }
