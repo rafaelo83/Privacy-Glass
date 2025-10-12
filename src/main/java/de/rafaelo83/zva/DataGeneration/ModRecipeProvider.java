@@ -23,7 +23,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.PRIVACY_GLASS)
                 .input(Items.INK_SAC)
                 .input(Items.GLASS)
-                .input(Items.GLOWSTONE)
+                .input(Items.GLOWSTONE_DUST)
                 .input(Items.REDSTONE)
 
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
