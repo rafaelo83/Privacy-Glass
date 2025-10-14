@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "zva:block/privacy_glass"
+    "all": "zva:block/privacy_glass_transparent"
   },
   "render_type": "translucent"
 }
