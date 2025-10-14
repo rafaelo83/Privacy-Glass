@@ -4,8 +4,6 @@ import de.rafaelo83.zva.Blocks.ModBlocks;
 import de.rafaelo83.zva.Items.ModItems;
 import de.rafaelo83.zva.Menus.ZvaCreativeTab;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ItemGroups;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

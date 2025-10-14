@@ -19,10 +19,6 @@ public class ModBlocks {
             new PrivacyGlassElectricBlock(AbstractBlock.Settings.create()));
 
 
-    private static Block registerBlockWithoutBlockItem(String name, Block block) {
-        return Registry.register(Registries.BLOCK, Identifier.of(Zva.MOD_ID, name), block);
-    }
-
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(Zva.MOD_ID, name), block);

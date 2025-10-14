@@ -11,6 +11,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
+@SuppressWarnings("unused")
 public class ZvaCreativeTab {
     public static final ItemGroup ZVA_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Zva.MOD_ID, "pink_garnet_group"),
