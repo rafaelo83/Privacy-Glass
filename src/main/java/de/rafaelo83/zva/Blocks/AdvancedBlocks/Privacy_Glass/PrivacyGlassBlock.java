@@ -1,6 +1,6 @@
-package de.rafaelo83.zva.Blocks.AdvancedBlocks;
+package de.rafaelo83.zva.Blocks.AdvancedBlocks.Privacy_Glass;
 
-import de.rafaelo83.zva.Blocks.Misc.WaveDataManager;
+import de.rafaelo83.zva.Blocks.AdvancedBlocks.Privacy_Glass.Misc.WaveDataManager;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.TransparentBlock;
@@ -29,33 +29,29 @@ public class PrivacyGlassBlock extends TransparentBlock {
     public PrivacyGlassBlock(Settings settings) {
         super(settings.nonOpaque().strength(0.3F));
         this.setDefaultState(this.stateManager.getDefaultState().with(POWERED, false));
+        // -> Property 'powered' is false on default
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(POWERED);
-    }
+    } //Add 'powered' as block property
 
     @Override
     protected int getOpacity(BlockState state, BlockView world, BlockPos pos) {
         return state.get(POWERED) ? 255 : 0;
-    }
-
-    @Override
-    protected boolean isTransparent(BlockState state, BlockView world, BlockPos pos) {
-        return !state.get(POWERED);
-    }
+    } //Change opacity depending on block state
 
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         if (world.isClient) {
             return ActionResult.SUCCESS;
-        }
-        // Start the wave from this lamp
-        startWave((ServerWorld) world, pos);
+        } //Start Hand Swing Animation on the client side on right-click
+
+        startWave((ServerWorld) world, pos); //start the propagation of the property-change to other blocks
         world.playSound(null, pos, SoundEvents.BLOCK_CHERRY_WOOD_BUTTON_CLICK_ON, SoundCategory.BLOCKS, 0.8f, 1.0f);
         return ActionResult.CONSUME;
-    }
+    } //Change block state on right click, in addition to starting wave that changes blocks in a given radius
 
     private void startWave(ServerWorld world, BlockPos origin) {
         // Use a set to record positions already in wave
