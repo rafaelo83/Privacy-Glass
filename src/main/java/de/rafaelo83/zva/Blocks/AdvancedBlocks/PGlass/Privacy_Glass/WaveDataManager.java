@@ -1,6 +1,5 @@
-package de.rafaelo83.zva.Blocks.AdvancedBlocks.Privacy_Glass.Misc;
+package de.rafaelo83.zva.Blocks.AdvancedBlocks.PGlass.Privacy_Glass;
 
-import de.rafaelo83.zva.Blocks.AdvancedBlocks.Privacy_Glass.PrivacyGlassBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
@@ -8,13 +7,13 @@ import net.minecraft.util.math.Direction;
 
 import java.util.*;
 
-import static de.rafaelo83.zva.Blocks.AdvancedBlocks.Privacy_Glass.PrivacyGlassBlock.POWERED;
+import static de.rafaelo83.zva.Blocks.AdvancedBlocks.PGlass.Privacy_Glass.PrivacyGlassBlock.POWERED;
 
 public class WaveDataManager {
     private static final Map<ServerWorld, Map<PrivacyGlassBlock, WaveState>> waves = new HashMap<>();
 
-    public static void startWave(ServerWorld world, PrivacyGlassBlock block, Deque<BlockPos> waveFrontier, Set<BlockPos> visited, int currentStep, boolean startAction) {
-        WaveState waveState = new WaveState(waveFrontier, visited, currentStep, startAction);
+    public static void startWave(ServerWorld world, PrivacyGlassBlock block, Deque<BlockPos> waveFrontier, Set<BlockPos> visited, int currentStep, boolean startAction, BlockPos origin) {
+        WaveState waveState = new WaveState(waveFrontier, visited, currentStep, startAction, origin);
         waves.computeIfAbsent(world, w -> new HashMap<>()).put(block, waveState);
     }
 
@@ -42,16 +41,19 @@ public class WaveDataManager {
                 if (visited.contains(nextPos)) continue;
                 BlockState nextState = world.getBlockState(nextPos);
                 if (nextState.getBlock() instanceof PrivacyGlassBlock) {
-                    world.setBlockState(nextPos, nextState.with(POWERED, !action), 3);
+                    world.setBlockState(nextPos, nextState.with(POWERED, action), 3);
                     visited.add(nextPos);
                     nextWaveFrontier.add(nextPos);
                     // schedule its tick for it to propagate
-                    world.scheduleBlockTick(nextPos, block, 2);
+
                 }
             }
         }
         waveState.frontier = nextWaveFrontier;
         waveState.step = step + 1;
+        if (!nextWaveFrontier.isEmpty()) {
+            world.scheduleBlockTick(waveState.origin, block, 1);
+        }
     }
 
     private static class WaveState {
@@ -59,11 +61,13 @@ public class WaveDataManager {
         Set<BlockPos> visited;
         int step;
         boolean action; // true: turn on | false: turn off
-        WaveState(Deque<BlockPos> f, Set<BlockPos> v, int s, boolean pAction) {
+        BlockPos origin;
+        WaveState(Deque<BlockPos> f, Set<BlockPos> v, int s, boolean pAction, BlockPos pOrigin) {
             this.frontier = f;
             this.visited = v;
             this.step = s;
             this.action = pAction;
+            this.origin = pOrigin;
         }
     }
 }

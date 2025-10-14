@@ -4,7 +4,6 @@ import de.rafaelo83.zva.Blocks.ModBlocks;
 import de.rafaelo83.zva.Items.ModItems;
 import de.rafaelo83.zva.Zva;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -18,7 +17,7 @@ public class ZvaCreativeTab {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.zva"))
                     .icon(() -> new ItemStack(ModBlocks.PRIVACY_GLASS)).entries((displayContext, entries) -> {
                         entries.add(ModBlocks.PRIVACY_GLASS);
-                        entries.add(ModItems.PHOTOCHROMIC_POWDER);
+                        entries.add(ModItems.MECHANOCHROMIC_POWDER);
                         entries.add(ModBlocks.PRIVACY_GLASS_ELECTRIC);
                         entries.add(ModItems.ELECTROCHROMIC_POWDER);
                     }).build());

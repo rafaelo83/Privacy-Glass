@@ -3,14 +3,14 @@
   "category": "redstone",
   "ingredients": [
     {
-      "item": "zva:mechanochromic_powder"
+      "item": "minecraft:glowstone_dust"
     },
     {
-      "item": "minecraft:glass"
+      "item": "minecraft:gunpowder"
     }
   ],
   "result": {
     "count": 1,
-    "id": "zva:privacy_glass"
+    "id": "zva:mechanochromic_powder"
   }
 }

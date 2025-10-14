@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_privacy_glass": {
+    "has_mechanochromic_powder": {
       "conditions": {
         "items": [
           {
-            "items": "zva:mechanochromic_powder"
+            "items": "minecraft:glowstone"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "zva:privacy_glass"
+        "recipe": "zva:mechanochromic_powder"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_privacy_glass"
+      "has_mechanochromic_powder"
     ]
   ],
   "rewards": {
     "recipes": [
-      "zva:privacy_glass"
+      "zva:mechanochromic_powder"
     ]
   }
 }

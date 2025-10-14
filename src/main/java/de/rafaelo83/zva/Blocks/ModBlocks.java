@@ -1,7 +1,7 @@
 package de.rafaelo83.zva.Blocks;
 
-import de.rafaelo83.zva.Blocks.AdvancedBlocks.Privacy_Glass.PrivacyGlassBlock;
-import de.rafaelo83.zva.Blocks.AdvancedBlocks.Privacy_Glass.PrivacyGlassElectricBlock;
+import de.rafaelo83.zva.Blocks.AdvancedBlocks.PGlass.Privacy_Glass.PrivacyGlassBlock;
+import de.rafaelo83.zva.Blocks.AdvancedBlocks.PGlass.Privacy_Glass_Electric.PrivacyGlassElectricBlock;
 import de.rafaelo83.zva.Zva;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;

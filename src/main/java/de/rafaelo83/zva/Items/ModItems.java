@@ -8,7 +8,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item PHOTOCHROMIC_POWDER = registerItem("photochromic_powder", new Item(new Item.Settings().maxCount(64)));
+    public static final Item MECHANOCHROMIC_POWDER = registerItem("mechanochromic_powder", new Item(new Item.Settings().maxCount(64)));
     public static final Item ELECTROCHROMIC_POWDER = registerItem("electrochromic_powder", new Item(new Item.Settings().maxCount(64)));
 
 

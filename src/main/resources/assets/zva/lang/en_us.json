@@ -1,7 +1,7 @@
 {
-  "itemgroup.zva": "Zu viel §dArbeitsspeicher",
   "block.zva.privacy_glass": "Privacy Glass",
   "block.zva.privacy_glass_electric": "Privacy Glass",
   "item.zva.electrochromic_powder": "Electrochromic Powder",
-  "item.zva.photochromic_powder": "Photochromic Powder"
+  "item.zva.mechanochromic_powder": "Mechanochromic Powder",
+  "itemgroup.zva": "Privacy Glass"
 }

@@ -1,3 +1,5 @@
-// 1.21.1	2025-10-12T22:11:05.3975948	Privacy Glass & more/Recipes
-9e077a65c4ce6cd5dcd09094a3dde82feaee5c54 data\zva\recipe\privacy_glass.json
-d37cdd2f9379740c0837b10f272a230f60f95af1 data\zva\advancement\recipes\redstone\privacy_glass.json
+// 1.21.1	2025-10-14T17:54:09.2687445	Privacy Glass & more/Recipes
+21552d4595a4710e26f7a0217b5d377b03a759eb data\zva\recipe\mechanochromic_powder.json
+a0a4148a441dc565fe24bada57d0f000452c859c data\zva\recipe\privacy_glass.json
+087709e950d170428f8c46357e3a43054533f23d data\zva\advancement\recipes\redstone\privacy_glass.json
+e2fcf7e9ace8946a98fac1cdbbd80f8931710974 data\zva\advancement\recipes\redstone\mechanochromic_powder.json
