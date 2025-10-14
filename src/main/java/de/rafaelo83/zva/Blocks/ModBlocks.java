@@ -1,6 +1,7 @@
 package de.rafaelo83.zva.Blocks;
 
 import de.rafaelo83.zva.Blocks.AdvancedBlocks.Privacy_Glass.PrivacyGlassBlock;
+import de.rafaelo83.zva.Blocks.AdvancedBlocks.Privacy_Glass.PrivacyGlassElectricBlock;
 import de.rafaelo83.zva.Zva;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -14,6 +15,9 @@ public class ModBlocks {
 
     public static final Block PRIVACY_GLASS = registerBlock("privacy_glass",
             new PrivacyGlassBlock(AbstractBlock.Settings.create()));
+    public static final Block PRIVACY_GLASS_ELECTRIC = registerBlock("privacy_glass_electric",
+            new PrivacyGlassElectricBlock(AbstractBlock.Settings.create()));
+
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, Identifier.of(Zva.MOD_ID, name), block);

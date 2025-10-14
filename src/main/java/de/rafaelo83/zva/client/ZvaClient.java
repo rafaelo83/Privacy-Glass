@@ -10,5 +10,6 @@ public class ZvaClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PRIVACY_GLASS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PRIVACY_GLASS_ELECTRIC, RenderLayer.getCutout());
     }
 }

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "powered=true": { "model": "minecraft:block/black_concrete" },
+    "powered=false": { "model": "zva:block/privacy_glass_electric_transparent" }
+  }
+}
+

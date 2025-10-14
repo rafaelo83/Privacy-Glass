@@ -1,6 +1,8 @@
 package de.rafaelo83.zva;
 
 import de.rafaelo83.zva.Blocks.ModBlocks;
+import de.rafaelo83.zva.Items.ModItems;
+import de.rafaelo83.zva.Menus.ZvaCreativeTab;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroups;
@@ -15,15 +17,10 @@ public class Zva implements ModInitializer {
     public void onInitialize() {
         LOGGER.info("Adding massive amounts of RAM");
         LOGGER.info("(In your dreams, actually initializing 'Privacy Glass & more')");
+
         ModBlocks.init();
-        //ZvaCreativeTab.init();
-        registerVanillaCreativeTabs();
+        ModItems.init();
 
-    }
-
-    public static void registerVanillaCreativeTabs() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> {
-            entries.add(ModBlocks.PRIVACY_GLASS);
-        });
+        ZvaCreativeTab.init();
     }
 }
