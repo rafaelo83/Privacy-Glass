@@ -28,6 +28,7 @@ public class ModBlocks {
                 new BlockItem(block,new  Item.Settings()));
     }
 
+    /*
     private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(
                 Registries.BLOCK,
@@ -35,6 +36,7 @@ public class ModBlocks {
                 block
         );
     }
+    */
 
     public static void init() {}
 }
