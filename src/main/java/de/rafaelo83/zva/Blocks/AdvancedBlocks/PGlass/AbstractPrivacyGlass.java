@@ -6,6 +6,7 @@ import net.minecraft.block.TransparentBlock;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 
 public abstract class AbstractPrivacyGlass extends TransparentBlock {
@@ -26,4 +27,14 @@ public abstract class AbstractPrivacyGlass extends TransparentBlock {
     protected int getOpacity(BlockState state, BlockView world, BlockPos pos) {
         return state.get(POWERED) ? 255 : 0;
     } //Change opacity depending on block state
+
+    @Override
+    protected boolean isTransparent(BlockState state, BlockView world, BlockPos pos) {
+        return !state.get(POWERED);
+    }
+
+    @Override
+    protected boolean isSideInvisible(BlockState state, BlockState stateFrom, Direction direction) {
+        return !state.get(POWERED) && super.isSideInvisible(state, stateFrom, direction);
+    }
 }

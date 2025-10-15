@@ -18,7 +18,6 @@ public class ModBlocks {
     public static final Block PRIVACY_GLASS_ELECTRIC = registerBlock("privacy_glass_electric",
             new PrivacyGlassElectricBlock(AbstractBlock.Settings.create()));
 
-
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(Zva.MOD_ID, name), block);
@@ -27,6 +26,14 @@ public class ModBlocks {
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(Zva.MOD_ID, name),
                 new BlockItem(block,new  Item.Settings()));
+    }
+
+    private static Block registerBlockWithoutItem(String name, Block block) {
+        return Registry.register(
+                Registries.BLOCK,
+                Identifier.of(Zva.MOD_ID, name),
+                block
+        );
     }
 
     public static void init() {}

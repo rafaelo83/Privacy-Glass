@@ -21,5 +21,6 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator generator) {
         generator.register(ModItems.MECHANOCHROMIC_POWDER, Models.GENERATED);
+        generator.register(ModItems.ELECTROCHROMIC_POWDER, Models.GENERATED);
     }
 }
